@@ -1,0 +1,383 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head></head><body class="font-body-md text-body-md min-h-screen flex flex-col">
+<meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "tertiary-container": "#88171b",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#2c4a4a",
+                        "tertiary-fixed-dim": "#ffb3ae",
+                        "on-primary-container": "#99b9b8",
+                        "surface-container": "#f0eded",
+                        "secondary-fixed": "#e1e3e4",
+                        "on-surface-variant": "#414848",
+                        "on-secondary-fixed": "#191c1d",
+                        "primary-fixed": "#c8e9e8",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#c5c7c8",
+                        "on-surface": "#1c1b1b",
+                        "on-primary-fixed": "#002020",
+                        "outline": "#717878",
+                        "on-tertiary-container": "#ff958e",
+                        "surface-variant": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#454748",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary": "#5c5f60",
+                        "primary-fixed-dim": "#accdcc",
+                        "on-background": "#1c1b1b",
+                        "tertiary-fixed": "#ffdad7",
+                        "inverse-primary": "#accdcc",
+                        "surface-container-low": "#f6f3f2",
+                        "on-secondary-container": "#626566",
+                        "surface-bright": "#fcf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "surface": "#fcf9f8",
+                        "primary": "#143334",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#8b191d",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "background": "#fcf9f8",
+                        "on-primary-fixed-variant": "#2e4c4c",
+                        "tertiary": "#65000a",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-fixed": "#410004",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#466464",
+                        "outline-variant": "#c1c8c7",
+                        "secondary-container": "#e1e3e4"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                },
+                "spacing": {
+                        "sm": "12px",
+                        "lg": "48px",
+                        "container-margin-desktop": "64px",
+                        "xs": "4px",
+                        "gutter": "16px",
+                        "md": "24px",
+                        "base": "8px",
+                        "container-margin-mobile": "16px",
+                        "xl": "80px"
+                },
+                "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "headline-md-mobile": ["Playfair Display"],
+                        "price-display": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "title-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "jakarta": ["Plus Jakarta Sans"]
+                },
+                "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700"}],
+                        "headline-md-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "price-display": ["18px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                }
+              },
+            },
+          }
+        }catch(_e){}</script>
+<!-- Navigation Drawer -->
+<div class="fixed inset-0 z-[100] hidden" id="nav-drawer">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0" id="nav-drawer-backdrop" onclick="closeDrawer()"></div>
+<aside class="absolute left-0 top-0 h-full w-80 bg-surface shadow-xl transition-transform duration-300 -translate-x-full flex flex-col" id="nav-drawer-panel">
+<div class="flex items-center justify-between p-4 border-b border-outline-variant/10">
+<h2 class="font-display-lg text-2xl text-primary italic" style="font-family: &quot;Playfair Display&quot;, serif;">Ruqi</h2>
+<button class="text-primary hover:opacity-80 transition-opacity" id="nav-drawer-close" onclick="closeDrawer()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex-1 py-8 px-4">
+<ul class="space-y-6"><li class="">
+<a class="text-2xl text-primary hover:text-secondary transition-colors flex items-center gap-4" href="home.html" style="font-family: &quot;Playfair Display&quot;, serif;">
+<span class="material-symbols-outlined">home</span>
+<span class="">Home</span>
+</a>
+</li>
+<li class="">
+<a class="text-2xl text-primary hover:text-secondary transition-colors flex items-center gap-4" href="Categories.html" style="font-family: &quot;Playfair Display&quot;, serif;">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="">Categories</span>
+</a>
+</li>
+<li class="">
+<a class="text-2xl text-primary hover:text-secondary transition-colors flex items-center gap-4" href="New Arrivals.html" style="font-family: &quot;Playfair Display&quot;, serif;">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="">New Arrivals</span>
+</a>
+</li>
+<li class="">
+<a class="text-2xl text-primary hover:text-secondary transition-colors flex items-center gap-4" href="Profile.html" style="font-family: &quot;Playfair Display&quot;, serif;">
+<span class="material-symbols-outlined">person</span>
+<span class="">Profile</span>
+</a>
+</li></ul>
+</nav>
+<div class="p-4 border-t border-outline-variant/10">
+<p class="text-[10px] text-secondary uppercase tracking-widest mb-4 font-jakarta">Account</p>
+<div class="flex items-center gap-4 text-primary">
+<a class="flex items-center gap-4 text-primary hover:text-secondary transition-colors font-jakarta" href="{{DATA:SCREEN:SCREEN_19}}">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium">Sign In / Register</span>
+</a>
+</div>
+</div>
+</aside>
+</div>
+<!-- Header -->
+<header class="bg-surface border-b border-outline-variant top-0 w-full z-50 flex justify-between items-center px-container-margin-mobile md:px-container-margin-desktop h-16 sticky">
+<div class="flex items-center justify-between w-full relative">
+<div class="flex items-center ml-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity active:scale-95 duration-150" onclick="openDrawer()">menu</button>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary italic ml-4">
+<a class="hover:opacity-80 transition-opacity" href="home.html">Ruqi</a>
+</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">COLLECTIONS</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">CURATED</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">STORY</a>
+</nav>
+<a class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity active:scale-95 duration-150" href="Cart.html">shopping_bag</a>
+</div>
+</div>
+</header>
+<!-- Category Tabs Nav -->
+<nav class="bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 sticky top-16 z-40">
+<div class="max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop overflow-x-auto hide-scrollbar">
+<div class="flex items-center justify-between h-12 min-w-max gap-8">
+<div class="flex gap-8">
+<a class="font-label-caps text-primary border-b-2 border-primary h-12 flex items-center px-1" href="#">WOMEN</a>
+<a class="font-label-caps text-secondary hover:text-primary h-12 flex items-center px-1 transition-colors" href="#">MEN</a>
+<a class="font-label-caps text-secondary hover:text-primary h-12 flex items-center px-1 transition-colors" href="#">ACCESSORIES</a>
+<a class="font-label-caps text-secondary hover:text-primary h-12 flex items-center px-1 transition-colors" href="#">BEAUTY</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary">search</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary">favorite</span>
+</div>
+</div>
+</div>
+</nav>
+<main class="flex-grow pt-8 pb-32 px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto w-full">
+<!-- Title & Count -->
+<section class="mb-gutter md:mb-lg">
+<h2 class="font-headline-md-mobile md:font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface mb-xs">Shopping Bag</h2>
+<p class="font-body-md text-on-surface-variant">3 items in your cart</p>
+</section>
+<!-- Main Content Area -->
+<div class="lg:grid lg:grid-cols-12 lg:gap-xl items-start">
+<!-- Product List -->
+<div class="lg:col-span-8 space-y-gutter lg:space-y-lg mb-xl lg:mb-0">
+<!-- Item 1 -->
+<div class="flex gap-gutter items-start pb-gutter border-b border-outline-variant/30">
+<div class="w-24 h-32 md:w-32 md:h-40 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Emerald Silk Midi Dress" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZYzIYompzooQsEBJcDvoX3anDDPUMr2PFizG5_3arKHdv4PWMQcUPgUpTbYa4KBCVo9_GAK8OLBBX87X9o48bKia7lFcJBXf2Ws0fEgthYsgvRFNiuPvFEkntM6vLHgLqsIj6FbzqlgEESri4-iHeFFk-0AyDXHHSEatI5-HPsEzE8zsAb7hF5wO6BmSObR4ieiH_n91U-y9bKm3mNZo4og-oLWd0tTbeOX-i6yTfbzeUdQ0kK7pv">
+</div>
+<div class="flex-grow flex flex-col justify-between min-h-[128px] md:min-h-[160px]">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-title-sm md:text-headline-md-mobile text-primary">Emerald Silk Midi</h3>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors">close</button>
+</div>
+<div class="flex flex-col md:flex-row md:gap-lg mt-xs md:mt-2">
+<p class="font-body-md text-on-surface-variant">Color: <span class="text-on-surface">Emerald</span></p>
+<p class="font-body-md text-on-surface-variant">Size: <span class="text-on-surface">Small</span></p>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center border border-outline-variant rounded-lg p-1 bg-surface-container-low">
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-90 transition-transform"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+<span class="w-8 text-center font-price-display text-price-display font-jakarta">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-90 transition-transform"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+<span class="font-price-display text-price-display md:text-[22px] text-primary">$345.00</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-gutter items-start pb-gutter border-b border-outline-variant/30">
+<div class="w-24 h-32 md:w-32 md:h-40 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Tailored Linen Pant" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzoQaArIxdKMaJhT4HmdEdc0SVTol3v8ipL6LT4rDuT2oryxujhYQI4JU_I6ngXZwlmb92pehl6IVIkVSvJtolmxEfhSbWURi2TYXOwfzJSvmAD8b6YIUGQBbn5KCvOHPWsEpTj669UxQic4TrkrPrJYDlLkIItraoF8S73joj6qOI-L2fS7iestEU-RLVI9n_oh_SQb8iQ_Jj6Zgw8lJNavSB5OyfXY4xJQ_i5xKtIt5E3QDpy-mv">
+</div>
+<div class="flex-grow flex flex-col justify-between min-h-[128px] md:min-h-[160px]">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-title-sm md:text-headline-md-mobile text-primary">Tailored Linen Pant</h3>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors">close</button>
+</div>
+<div class="flex flex-col md:flex-row md:gap-lg mt-xs md:mt-2">
+<p class="font-body-md text-on-surface-variant">Color: <span class="text-on-surface">Ivory</span></p>
+<p class="font-body-md text-on-surface-variant">Size: <span class="text-on-surface">Medium</span></p>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center border border-outline-variant rounded-lg p-1 bg-surface-container-low">
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-90 transition-transform"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+<span class="w-8 text-center font-price-display text-price-display font-jakarta">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-90 transition-transform"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+<span class="font-price-display text-price-display md:text-[22px] text-primary">$290.00</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex gap-gutter items-start pb-gutter border-b border-outline-variant/30">
+<div class="w-24 h-32 md:w-32 md:h-40 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Architect Cuff" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSw-6lYCM2EPlW4mFLldJdDumt79SaUmV1jzzUMoio_c_8K7ZaU8GOTkJBbD0S6hRpMClFy3S-3YG4nFTbRNb4vzHCdzL6Jm0rO66XWpv_bb7ZkLR6zmOZnS4NpcqKwArSpff6MCSmBMLqCGuWx1_B7UfD7FDYclwu-5VK6FB7DQcEM7UptZbAIdxkT0bNwNXl9aUHMb1eWG4VsMMiK0eYpmI3Rkl0fxw6lZaZ3t9-xDvhkMbbZByA">
+</div>
+<div class="flex-grow flex flex-col justify-between min-h-[128px] md:min-h-[160px]">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-title-sm md:text-headline-md-mobile text-primary">Architect Cuff</h3>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors">close</button>
+</div>
+<div class="flex flex-col md:flex-row md:gap-lg mt-xs md:mt-2">
+<p class="font-body-md text-on-surface-variant">Color: <span class="text-on-surface">Gold</span></p>
+<p class="font-body-md text-on-surface-variant">Size: <span class="text-on-surface">One Size</span></p>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center border border-outline-variant rounded-lg p-1 bg-surface-container-low">
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-90 transition-transform"><span class="material-symbols-outlined text-[18px]">remove</span></button>
+<span class="w-8 text-center font-price-display text-price-display font-jakarta">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary active:scale-90 transition-transform"><span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+<span class="font-price-display text-price-display md:text-[22px] text-primary">$180.00</span>
+</div>
+</div>
+</div>
+<!-- Shipping Links -->
+<div class="hidden lg:flex gap-gutter text-outline text-[12px] uppercase tracking-widest pt-lg">
+<a class="hover:text-primary transition-colors underline underline-offset-4" href="#">Shipping Policy</a>
+<a class="hover:text-primary transition-colors underline underline-offset-4" href="#">Need Help?</a>
+</div>
+</div>
+<!-- Sidebar Summary -->
+<div class="lg:col-span-4 sticky top-40 space-y-md">
+<!-- Promo Code -->
+<section class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md">
+<h4 class="font-label-caps text-on-surface mb-sm uppercase">Promo Code</h4>
+<div class="flex gap-xs">
+<input class="flex-grow bg-surface-container-low border-outline-variant focus:border-primary focus:ring-0 rounded-lg px-4 py-3 font-body-md placeholder:text-outline" placeholder="Enter code" type="text">
+<button class="bg-primary text-on-primary px-4 md:px-6 rounded-lg font-label-caps uppercase text-[11px] md:text-label-caps active:scale-95 transition-transform">Apply</button>
+</div>
+</section>
+<!-- Order Summary -->
+<section class="bg-surface-container-low rounded-xl p-md space-y-sm">
+<h4 class="font-label-caps text-on-surface mb-sm uppercase">Order Summary</h4>
+<div class="flex justify-between">
+<span class="font-body-md text-on-surface-variant">Subtotal</span>
+<span class="font-price-display text-body-lg">$815.00</span>
+</div>
+<div class="flex justify-between">
+<span class="font-body-md text-on-surface-variant">Shipping</span>
+<span class="font-body-md text-primary font-semibold">Free</span>
+</div>
+<div class="flex justify-between">
+<span class="font-body-md text-on-surface-variant">Estimated Tax</span>
+<span class="font-price-display text-body-lg">$65.20</span>
+</div>
+<div class="pt-sm mt-sm border-t border-outline-variant/50 flex justify-between items-center">
+<span class="font-title-sm text-on-surface">Total</span>
+<span class="font-price-display text-headline-md-mobile text-primary">$880.20</span>
+</div>
+<button class="w-full bg-primary text-on-primary h-14 rounded-lg font-label-caps uppercase text-label-caps tracking-[0.1em] shadow-lg active:scale-98 transition-transform mt-md">
+                    Checkout
+                </button>
+</section>
+<!-- Mobile Service Links -->
+<div class="flex lg:hidden justify-center gap-gutter text-outline text-[12px] uppercase tracking-widest pt-sm">
+<a class="hover:text-primary transition-colors underline underline-offset-4" href="#">Shipping Policy</a>
+<a class="hover:text-primary transition-colors underline underline-offset-4" href="#">Need Help?</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center bg-surface border-t border-outline-variant py-base"><div class="flex justify-around items-center w-full px-4 py-3"><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-150 active:scale-90" href="home.html"><span class="material-symbols-outlined">home</span><span class="font-label-caps text-[10px] mt-1">Home</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-150 active:scale-90" href="Categories.html"><span class="material-symbols-outlined">grid_view</span><span class="font-label-caps text-[10px] mt-1">Categories</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-150 active:scale-90" href="New Arrivals.html"><span class="material-symbols-outlined">auto_awesome</span><span class="font-label-caps text-[10px] mt-1">New Arrivals</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-150 active:scale-90" href="Profile.html"><span class="material-symbols-outlined">person</span><span class="font-label-caps text-[10px] mt-1">Profile</span></a></div></nav>
+<!-- Footer -->
+<footer class="hidden md:grid grid-cols-4 gap-gutter px-container-margin-desktop py-lg max-w-7xl mx-auto w-full bg-surface-container-lowest border-t border-outline-variant mt-xl">
+<div class="col-span-1">
+<h4 class="font-headline-md text-primary italic mb-sm">Ruqi</h4>
+<p class="font-body-md text-on-surface-variant">Elevating modern minimalism since 2024.</p>
+</div>
+<div class="flex flex-col space-y-2">
+<h5 class="font-label-caps text-on-surface mb-2 uppercase">Shop</h5>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Women</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Men</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Accessories</a>
+</div>
+<div class="flex flex-col space-y-2">
+<h5 class="font-label-caps text-on-surface mb-2 uppercase">Support</h5>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Return Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Newsletter</a>
+</div>
+<div class="flex flex-col space-y-2">
+<h5 class="font-label-caps text-on-surface mb-2 uppercase">Social</h5>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Pinterest</a>
+</div>
+<div class="col-span-4 mt-lg text-center font-label-caps text-[10px] text-on-surface-variant opacity-50">
+        © 2024 RUQI RETAIL. ALL RIGHTS RESERVED.
+    </div>
+</footer>
+<script>
+    // Navigation Drawer Logic
+    function openDrawer() {
+        const drawer = document.getElementById('nav-drawer');
+        const backdrop = document.getElementById('nav-drawer-backdrop');
+        const panel = document.getElementById('nav-drawer-panel');
+        
+        drawer.classList.remove('hidden');
+        setTimeout(() => {
+            backdrop.classList.replace('opacity-0', 'opacity-100');
+            panel.classList.replace('-translate-x-full', 'translate-x-0');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+        const drawer = document.getElementById('nav-drawer');
+        const backdrop = document.getElementById('nav-drawer-backdrop');
+        const panel = document.getElementById('nav-drawer-panel');
+        
+        backdrop.classList.replace('opacity-100', 'opacity-0');
+        panel.classList.replace('translate-x-0', '-translate-x-full');
+        setTimeout(() => {
+            drawer.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 300);
+    }
+</script>
+```
+
+
+
+
+
+
+
+</body></html>

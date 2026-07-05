@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&amp;family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#002020",
+                        "primary-fixed-dim": "#accdcc",
+                        "tertiary": "#65000a",
+                        "surface-container": "#f0eded",
+                        "on-secondary-container": "#626566",
+                        "surface-tint": "#466464",
+                        "on-tertiary-container": "#ff958e",
+                        "on-secondary-fixed-variant": "#454748",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e1e3e4",
+                        "outline-variant": "#c1c8c7",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#191c1d",
+                        "tertiary-container": "#88171b",
+                        "outline": "#717878",
+                        "on-background": "#1c1b1b",
+                        "tertiary-fixed-dim": "#ffb3ae",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-low": "#f6f3f2",
+                        "on-primary-container": "#99b9b8",
+                        "inverse-on-surface": "#f3f0ef",
+                        "inverse-surface": "#313030",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#414848",
+                        "on-tertiary-fixed-variant": "#8b191d",
+                        "tertiary-fixed": "#ffdad7",
+                        "error-container": "#ffdad6",
+                        "background": "#fcf9f8",
+                        "surface-bright": "#fcf9f8",
+                        "primary-fixed": "#c8e9e8",
+                        "primary": "#143334",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "secondary-container": "#e1e3e4",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#c5c7c8",
+                        "secondary": "#5c5f60",
+                        "surface-dim": "#dcd9d9",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#2c4a4a",
+                        "on-primary-fixed-variant": "#2e4c4c",
+                        "inverse-primary": "#accdcc",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-fixed": "#410004"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin-mobile": "16px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "container-margin-desktop": "64px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "gutter": "16px",
+                        "sm": "12px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "headline-md-mobile": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "price-display": ["Inter"],
+                        "jakarta": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-md-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "price-display": ["18px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    }catch(_e){}</script></head><body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- Navigation Drawer Overlay -->
+<!-- Navigation Drawer -->
+<div class="fixed inset-0 z-[100]" id="nav-drawer">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-100" id="nav-drawer-backdrop" onclick="const drawer = document.getElementById('nav-drawer'); const backdrop = document.getElementById('nav-drawer-backdrop'); const panel = document.getElementById('nav-drawer-panel'); backdrop.classList.replace('opacity-100', 'opacity-0'); panel.classList.replace('translate-x-0', '-translate-x-full'); setTimeout(() =&gt; { drawer.classList.add('hidden'); }, 300);"></div>
+<aside class="absolute left-0 top-0 h-full w-80 bg-surface shadow-xl transition-transform duration-300 translate-x-0 flex flex-col" id="nav-drawer-panel">
+<div class="flex items-center justify-between p-4 border-b border-outline-variant/10">
+<h2 class="font-display-lg text-2xl text-primary italic" style="font-family: 'Playfair Display', serif;">Ruqi</h2>
+<button class="text-primary hover:opacity-80 transition-opacity" id="nav-drawer-close" onclick="const drawer = document.getElementById('nav-drawer'); const backdrop = document.getElementById('nav-drawer-backdrop'); const panel = document.getElementById('nav-drawer-panel'); backdrop.classList.replace('opacity-100', 'opacity-0'); panel.classList.replace('translate-x-0', '-translate-x-full'); setTimeout(() =&gt; { drawer.classList.add('hidden'); }, 300);">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex-1 py-8 px-4">
+<ul class="space-y-6"><li class="">
+<a class="text-2xl text-primary hover:text-secondary transition-colors flex items-center gap-4" href="home.html" style="font-family: 'Playfair Display', serif;">
+<span class="material-symbols-outlined">home</span>
+<span class="">Home</span>
+</a>
+</li>
+<li class="">
+<a class="text-2xl text-primary hover:text-secondary transition-colors flex items-center gap-4" href="Categories.html" style="font-family: 'Playfair Display', serif;">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="">Categories</span>
+</a>
+</li>
+<li class="">
+<a class="text-2xl text-primary hover:text-secondary transition-colors flex items-center gap-4" href="New Arrivals.html" style="font-family: 'Playfair Display', serif;">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="">New Arrivals</span>
+</a>
+</li>
+<li class="">
+<a class="text-2xl text-primary hover:text-secondary transition-colors flex items-center gap-4 font-bold" href="Profile.html" style="font-family: 'Playfair Display', serif;">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="">Profile</span>
+</a>
+</li></ul>
+</nav>
+<div class="p-4 border-t border-outline-variant/10">
+<p class="text-[10px] text-secondary uppercase tracking-widest mb-4 font-jakarta">Account</p>
+<div class="flex items-center gap-4 text-primary">
+<a class="flex items-center gap-4 text-primary hover:text-secondary transition-colors font-jakarta" href="{{DATA:SCREEN:SCREEN_21}}">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium">Sign In / Register</span>
+</a>
+</div>
+</div>
+</aside>
+</div>
+<!-- Top App Bar -->
+<header class="bg-surface border-b border-outline-variant top-0 w-full z-50 flex justify-between items-center px-container-margin-mobile md:px-container-margin-desktop h-16 backdrop-blur-md bg-surface/80 sticky">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity active:scale-95 duration-150" onclick="const drawer = document.getElementById('nav-drawer'); const backdrop = document.getElementById('nav-drawer-backdrop'); const panel = document.getElementById('nav-drawer-panel'); drawer.classList.remove('hidden'); setTimeout(() =&gt; { backdrop.classList.replace('opacity-0', 'opacity-100'); panel.classList.replace('-translate-x-full', 'translate-x-0'); }, 10);">menu</button>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary italic"><a class="hover:opacity-80 transition-opacity" href="{{DATA:SCREEN:SCREEN_39}}">Ruqi</a></h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">COLLECTIONS</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">CURATED</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">STORY</a>
+</nav>
+<a class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity active:scale-95 duration-150" data-original-icon="shopping_bag" href="{{DATA:SCREEN:SCREEN_15}}">shopping_bag</a>
+</div>
+</header>
+<main class="pt-24 max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop">
+<!-- Profile Header Section -->
+<section class="mb-lg md:mb-xl flex flex-col md:flex-row items-center md:items-end gap-md md:gap-lg transition-all duration-700 ease-out opacity-100 translate-y-0">
+<div class="relative group">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-full border border-outline-variant p-1 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover rounded-full" data-alt="A professional studio portrait of Elena Montgomery, a sophisticated woman with a confident smile. She is wearing a high-end charcoal silk blouse. The lighting is soft and editorial, characteristic of a luxury fashion magazine. The background is a clean, minimalist off-white studio setting, emphasizing her status as a premium brand member." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKX171IKLeHMoPLiHQKN1TBjtt3-3NGG5dqP7jSGVfbs-y-UmIHg7RLD3kS3lQswobf_3OX9HfS36rawPn4jUvkTRtofDnycQ3uPALt0Fh9XpqtEDwltdCslDJ_o2C1i3RLVymHTvasdY3OvD4GjiuhZ8Z-59a9T1tDjkcExBGupklH-M_18d6szMxFl0kkOhXyvZM_Z9qn4JNutij60ot5JsT-4IXi2jPYusAZrx-8UXuCFnGZc3X"/>
+</div>
+<button class="absolute bottom-1 right-1 bg-primary text-on-primary p-2 rounded-full shadow-lg hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<div class="text-center md:text-left flex-1">
+<p class="font-label-caps text-label-caps text-primary tracking-[0.2em] mb-xs uppercase">Platinum Member</p>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-xs">Elena Montgomery</h2>
+<p class="font-body-md text-secondary">Member since November 2021 • New York, NY</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-opacity active:scale-95">REDEEM POINTS</button>
+</div>
+</section>
+<!-- Bento Grid Layout for Dashboard Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter lg:gap-md">
+<!-- Recent Orders (Main Content Area) -->
+<div class="md:col-span-8 space-y-md transition-all duration-700 ease-out opacity-100 translate-y-0">
+<div class="bg-surface-container-lowest border border-outline-variant p-md md:p-lg rounded-xl">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-headline-md-mobile md:font-headline-md text-primary">Order History</h3>
+<a class="font-label-caps text-label-caps text-secondary underline hover:text-primary" href="#">VIEW ALL</a>
+</div>
+<div class="space-y-sm">
+<!-- Order Row 1 -->
+<div class="flex items-center gap-md py-4 border-b border-outline-variant group hover:bg-surface-container-low transition-colors px-xs rounded-lg cursor-pointer" style="transform: scale(1);">
+<div class="w-20 h-24 bg-surface-container overflow-hidden rounded-md flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up photography of a structured architectural handbag in deep emerald green leather, resting on a clean white marble surface. The lighting creates crisp shadows, highlighting the premium texture of the leather. High-end retail catalog style with minimalist composition and cool color tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2LD0kpSvWE7vxtUGne7MD-asNZsgtGjD0OAnTApypyZ_g4VuDssJL5OQK_UzShWDDg-yYauq72hxqtm-Deg168ZLNwKBEv_gtuWAaY4pfRnkUZDuL20bcpxMH-FpXZJXqPeYU1_5i67G_4_FszeTMxatUny8OHvaD7xXczEhLpWW_F2Q9BHQQ2hqEn1M8CYu5j7Qn2KOMFo2PEjbql5BVpuiwiHITwq1GtzFIIm6h4afNZZ8UMp-O"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-xs">
+<div>
+<p class="font-title-sm text-on-surface">#RQ-90124</p>
+<p class="font-body-md text-secondary">Placed on May 12, 2024</p>
+</div>
+<span class="px-3 py-1 bg-primary-container text-on-primary-container font-label-caps text-[10px] rounded-full uppercase tracking-wider">Shipped</span>
+</div>
+<div class="flex justify-between items-end">
+<p class="font-body-md text-on-surface-variant italic">Architectural Leather Tote + 2 items</p>
+<p class="font-price-display text-primary">$1,240.00</p>
+</div>
+</div>
+</div>
+<!-- Order Row 2 -->
+<div class="flex items-center gap-md py-4 border-b border-outline-variant group hover:bg-surface-container-low transition-colors px-xs rounded-lg cursor-pointer">
+<div class="w-20 h-24 bg-surface-container overflow-hidden rounded-md flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A pair of minimalist white leather sneakers displayed against a soft gray background. The lighting is bright and airy, typical of a high-end Nordic boutique. The design of the sneakers is sleek, with subtle stitching and no visible branding, reflecting a sophisticated quiet luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVzhBJ4XNcbbq0btiBFCxbAXTe3htdOrfW5_gm4t6L_Y4Ai7CCp7oZ9fcP7feb_v40BzPq7RfD5bcSeQKB84jeMLIUO_ri4DD3KOb3kABwIcnzO3DMoUczXrRBlmHaJKjW_ne1QnkTLyLkeg-q5UW866UWNcD7HSZGMlXxqpENGZb8nVJqX7LDMxbZUl7tR9v0CP_7KFfRr_EEaMu53wIk__tzYCtwEg-K1ZnyuYhWcnAdYsqUFCFJ"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-xs">
+<div>
+<p class="font-title-sm text-on-surface">#RQ-89842</p>
+<p class="font-body-md text-secondary">Placed on April 28, 2024</p>
+</div>
+<span class="px-3 py-1 bg-surface-container-highest text-secondary font-label-caps text-[10px] rounded-full uppercase tracking-wider">Delivered</span>
+</div>
+<div class="flex justify-between items-end">
+<p class="font-body-md text-on-surface-variant italic">Essential Series Sneakers (Bone)</p>
+<p class="font-price-display text-primary">$450.00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Saved Addresses -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md md:p-lg rounded-xl">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-headline-md-mobile md:font-headline-md text-primary">Saved Addresses</h3>
+<button class="material-symbols-outlined text-primary hover:bg-secondary-container p-2 rounded-full transition-colors">add</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<div class="border border-primary-container p-md rounded-lg relative bg-surface-container-low/30 transition-all duration-700 ease-out opacity-100 translate-y-0">
+<span class="absolute top-4 right-4 font-label-caps text-[10px] text-primary-container font-bold tracking-tighter bg-primary/10 px-2 py-0.5 rounded">DEFAULT</span>
+<p class="font-label-caps text-label-caps text-primary mb-2">HOME</p>
+<p class="font-body-md text-on-surface">124 Mercer Street, Apt 4B</p>
+<p class="font-body-md text-on-surface">New York, NY 10012</p>
+<p class="font-body-md text-secondary mt-2">United States</p>
+</div>
+<div class="border border-outline-variant p-md rounded-lg hover:border-primary transition-colors cursor-pointer group transition-all duration-700 ease-out opacity-100 translate-y-0">
+<p class="font-label-caps text-label-caps text-secondary group-hover:text-primary mb-2">OFFICE</p>
+<p class="font-body-md text-on-surface">750 Lexington Ave, Fl 18</p>
+<p class="font-body-md text-on-surface">New York, NY 10022</p>
+<p class="font-body-md text-secondary mt-2">United States</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Content Area -->
+<div class="md:col-span-4 space-y-md transition-all duration-700 ease-out opacity-100 translate-y-0">
+<!-- Payment Methods -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl">
+<h3 class="font-headline-md-mobile text-primary mb-md">Payment Methods</h3>
+<div class="space-y-sm">
+<div class="flex items-center gap-md p-md border border-outline-variant rounded-lg bg-surface">
+<div class="w-12 h-8 bg-secondary-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-original-icon="credit_card">credit_card</span>
+</div>
+<div class="flex-1">
+<p class="font-body-md font-semibold text-on-surface">Visa ending in 4429</p>
+<p class="font-label-caps text-[10px] text-secondary">EXPIRES 11/26</p>
+</div>
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+</div>
+<div class="flex items-center gap-md p-md border border-outline-variant border-dashed rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="w-12 h-8 bg-surface-container rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">add</span>
+</div>
+<p class="font-label-caps text-label-caps text-secondary">ADD NEW CARD</p>
+</div>
+</div>
+</div>
+<!-- Quick Settings & Preferences -->
+<div class="bg-surface-container-low border border-outline-variant p-md rounded-xl">
+<h3 class="font-headline-md-mobile text-primary mb-md">Settings</h3>
+<ul class="space-y-2">
+<li class="">
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-surface transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary" data-original-icon="person_outline">person_outline</span>
+<span class="font-body-md text-on-surface">Personal Information</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-sm" data-original-icon="chevron_right">chevron_right</span>
+</button>
+</li>
+<li class="">
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-surface transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary" data-original-icon="notifications">notifications</span>
+<span class="font-body-md text-on-surface">Notifications</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-sm" data-original-icon="chevron_right">chevron_right</span>
+</button>
+</li>
+<li class="">
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-surface transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">security</span>
+<span class="font-body-md text-on-surface">Security &amp; Privacy</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-sm" data-original-icon="chevron_right">chevron_right</span>
+</button>
+</li>
+<li class="">
+<button class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-surface transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">language</span>
+<span class="font-body-md text-on-surface">Language (EN)</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-sm" data-original-icon="chevron_right">chevron_right</span>
+</button>
+</li>
+<li class="pt-4 mt-4 border-t border-outline-variant">
+<button class="w-full flex items-center gap-3 p-3 text-error hover:bg-error-container/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body-md font-semibold">Sign Out</span>
+</button>
+</li>
+</ul>
+</div>
+<!-- Editorial Promotional Card -->
+<div class="relative rounded-xl overflow-hidden aspect-[4/5] md:aspect-square flex flex-col justify-end p-md md:p-lg group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A moody, high-fashion lifestyle shot featuring a model wearing a sophisticated oversized camel coat and leather accessories, walking through a minimalist Brutalist architectural space. The color palette is composed of warm earths and cold grays. Professional editorial fashion photography style with soft atmospheric lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCU-qgAfUbwrloKDRDaWnNqrzSgN2_zB23i8GdUcs7QAf0aXB6DlblFEelg5kyZC7v3R5kU-KU3CA4sJT3VUtqsR_CEF2hBkyvoGpBo5M3xn0taDoYjCU2prb2i30v2eWZNOECtdBfZYXVCUdYojaYVdrEDBiGJtRLYDQhtnD7eiZRq-7QnWiDWIoN4sUQh6j4oluzrkhNQGwKj5aWr_0VKnFk3WqEPZo0YqJgHQywE25pWkZjWdj9p')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="relative z-10">
+<p class="font-label-caps text-label-caps text-primary-fixed-dim mb-xs">EARLY ACCESS</p>
+<h4 class="font-headline-md text-on-primary mb-4 leading-tight">The Autumn Curated Collection is Here.</h4>
+<button class="w-full py-3 bg-white text-primary font-label-caps text-label-caps rounded-lg hover:bg-primary-fixed transition-colors">SHOP PRIVATE SALE</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center bg-surface border-t border-outline-variant py-base"><div class="flex justify-around items-center w-full px-4 py-3">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-150 active:scale-90" href="home.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-150 active:scale-90" href="Categories.html">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-label-sm text-label-sm mt-1">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-150 active:scale-90" href="New Arrivals.html">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-label-sm text-label-sm mt-1">New Arrivals</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold transition-transform duration-150 active:scale-90" href="Profile.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</div></nav>
+<!-- Floating Action Button - Only for Home/Dash -->
+<button class="fixed bottom-24 right-container-margin-mobile md:bottom-12 md:right-container-margin-desktop w-14 h-14 bg-primary-container text-on-primary-container rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 500;">support_agent</span>
+</button>
+<script class="">
+    // Navigation Drawer Toggle logic
+    function toggleDrawer() {
+        const drawer = document.getElementById('nav-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        const isOpen = drawer.classList.contains('translate-x-0');
+
+        if (isOpen) {
+            drawer.classList.remove('translate-x-0');
+            drawer.classList.add('-translate-x-full');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            overlay.classList.remove('opacity-100', 'pointer-events-auto');
+            document.body.style.overflow = '';
+        } else {
+            drawer.classList.remove('-translate-x-full');
+            drawer.classList.add('translate-x-0');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            overlay.classList.add('opacity-100', 'pointer-events-auto');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Micro-interaction: Active state feedback for lists
+    document.querySelectorAll('.group').forEach(item => {
+        item.addEventListener('mousedown', () => {
+            item.style.transform = 'scale(0.98)';
+            item.style.transition = 'transform 0.1s ease';
+        });
+        item.addEventListener('mouseup', () => {
+            item.style.transform = 'scale(1)';
+        });
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'scale(1)';
+        });
+    });
+</script>
+</body></html>

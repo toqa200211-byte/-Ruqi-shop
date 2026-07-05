@@ -1,0 +1,433 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Wa'ei Retail | Modern Minimalist Fashion</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "tertiary-fixed": "#ffdbcb",
+                "primary-container": "#2c4a4a",
+                "on-error-container": "#93000a",
+                "on-error": "#ffffff",
+                "inverse-surface": "#313030",
+                "inverse-on-surface": "#f3f0ef",
+                "surface-bright": "#fcf9f8",
+                "tertiary-container": "#5d3e2f",
+                "on-primary-fixed-variant": "#2e4c4c",
+                "on-tertiary-fixed-variant": "#5f3f30",
+                "tertiary-fixed-dim": "#eabda9",
+                "outline": "#717878",
+                "primary": "#143334",
+                "primary-fixed": "#c8e9e8",
+                "surface-container": "#f0eded",
+                "error": "#ba1a1a",
+                "surface-container-lowest": "#ffffff",
+                "surface-dim": "#dcd9d9",
+                "on-primary-container": "#99b9b8",
+                "surface-container-high": "#eae7e7",
+                "surface-tint": "#466464",
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed-variant": "#8b191d",
+                "on-secondary-container": "#6d000c",
+                "surface-container-low": "#f6f3f2",
+                "on-tertiary-container": "#d5aa96",
+                "on-primary-fixed": "#002020",
+                "error-container": "#ffdad6",
+                "secondary-fixed-dim": "#ffb3ae",
+                "surface-container-highest": "#e5e2e1",
+                "on-tertiary-fixed": "#2d1509",
+                "background": "#fcf9f8",
+                "secondary-fixed": "#ffdad7",
+                "outline-variant": "#c1c8c7",
+                "primary-fixed-dim": "#accdcc",
+                "on-background": "#1c1b1b",
+                "surface": "#fcf9f8",
+                "secondary-container": "#fd6d67",
+                "on-surface": "#1c1b1b",
+                "tertiary": "#44281b",
+                "surface-variant": "#e5e2e1",
+                "on-tertiary": "#ffffff",
+                "inverse-primary": "#accdcc",
+                "on-surface-variant": "#414848",
+                "on-secondary-fixed": "#410004",
+                "secondary": "#ac3231",
+                "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "stack-lg": "3rem",
+                "section-padding": "4rem",
+                "stack-md": "1.5rem",
+                "stack-sm": "0.5rem",
+                "container-margin": "1.25rem",
+                "gutter": "1rem"
+            },
+            "fontFamily": {
+                "label-md": ["Plus Jakarta Sans"],
+                "headline-md": ["Plus Jakarta Sans"],
+                "label-sm": ["Plus Jakarta Sans"],
+                "body-md": ["Plus Jakarta Sans"],
+                "headline-lg-mobile": ["Plus Jakarta Sans"],
+                "headline-lg": ["Plus Jakarta Sans"],
+                "body-lg": ["Plus Jakarta Sans"],
+                "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Glassmorphism utility */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 shadow-sm bg-surface"><div class="flex justify-between items-center px-container-margin py-stack-sm w-full max-w-7xl mx-auto"><div class="flex items-center gap-4"><button class="text-primary hover:opacity-80 transition-opacity" onclick="const drawer = document.getElementById('nav-drawer'); const backdrop = document.getElementById('nav-drawer-backdrop'); const panel = document.getElementById('nav-drawer-panel'); drawer.classList.remove('hidden'); setTimeout(() =&gt; { backdrop.classList.replace('opacity-0', 'opacity-100'); panel.classList.replace('-translate-x-full', 'translate-x-0'); }, 10);"><span class="material-symbols-outlined">menu</span></button><h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary italic" style="font-family: &quot;Playfair Display&quot;, serif; font-weight: 700;">
+      <a class="hover:opacity-80 transition-opacity" href="{{DATA:SCREEN:SCREEN_39}}">Ruqi</a>
+    </h1></div><div class="flex items-center gap-4 md:gap-6"><a href="Cart.html" class="text-primary hover:opacity-80 transition-opacity relative"><span class="material-symbols-outlined">shopping_bag</span><span class="absolute -top-1 -right-1 bg-secondary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span></a></div></div></header>
+<!-- Category Tabs -->
+<nav class="bg-surface border-b border-outline-variant/10"><div class="max-w-7xl mx-auto flex items-center justify-center space-x-8 py-3 px-container-margin overflow-x-auto hide-scrollbar">
+<a class="text-label-md font-label-md text-primary font-bold border-b-2 border-primary pb-1 whitespace-nowrap transition-all" href="#">Women</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:border-b-2 hover:border-primary/30 transition-all pb-1 whitespace-nowrap" href="#">Men</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:border-b-2 hover:border-primary/30 transition-all pb-1 whitespace-nowrap" href="#">Kids</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:border-b-2 hover:border-primary/30 transition-all pb-1 whitespace-nowrap" href="#">Accessories</a>
+<a class="text-label-md font-label-md text-secondary font-bold hover:opacity-80 transition-all pb-1 whitespace-nowrap" href="#">Sale</a>
+</div></nav>
+<main class="max-w-7xl mx-auto">
+<!-- Hero Slider -->
+<section class="relative w-full h-[60vh] md:h-[75vh] overflow-hidden md:h-[85vh]">
+<div class="absolute inset-0 bg-cover transition-all duration-1000 ease-in-out bg-top" data-alt="A high-fashion editorial photograph of a model in a breezy, high-end white linen summer outfit standing against a minimalist architectural background with soft shadows. The lighting is bright and natural, reflecting a premium light-mode aesthetic. The color palette features deep petrol green accents in the environment. The overall mood is sophisticated, airy, and luxurious." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCnhuGbl9p8l6APU7wrYAA0QLLqYKHKfADMHEMJdwT2_tib_GAbVrbY5T_8gKxmNTP8LXFOkUNDvLSWyTd5F1hUY2u4H5Rke_wy1zBNDP0SvMQwEItIq65oxVc_pyQeUpZMgi8LBp01aeO4aeZOE0cjeKtRc9iWp6_zU-Vv-8k7iSDV905eteKsHAcuDCMpPtpp63HFFf4mvD-rKgIYJxJgkw95xBZ791cydjTylTS1Wnyn29czM7fR&quot;);">
+<div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent"></div>
+</div>
+<div class="relative h-full flex flex-col justify-center px-container-margin md:px-section-padding fade-in">
+<p class="text-white text-label-md font-label-md tracking-[0.2em] mb-4">SEASONAL COLLECTION</p>
+<h1 class="text-white text-display-lg font-display-lg md:text-[64px] md:leading-[72px] mb-6 max-w-xl" style="font-family: &quot;Playfair Display&quot;, serif;">Summer Sale:<br>Elevate Your Style</h1>
+<p class="text-white/90 text-body-lg font-body-lg mb-8 max-w-md">Discover curated luxury essentials with up to 40% off for a limited time.</p>
+<div class="flex gap-4">
+<button class="bg-[#2c4a4a] text-white px-8 py-3.5 rounded-lg font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all">
+                        Shop Now
+                    </button>
+<button class="glass-card text-primary px-8 py-3.5 rounded-lg font-label-md text-label-md border border-white/30 hover:bg-white/90 transition-all">
+                        View Lookbook
+                    </button>
+</div>
+</div>
+<!-- Slider Dots -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+<span class="w-8 h-1 bg-white rounded-full"></span>
+<span class="w-8 h-1 bg-white/30 rounded-full"></span>
+<span class="w-8 h-1 bg-white/30 rounded-full"></span>
+</div>
+</section>
+<!-- Flash Sale Banner -->
+<section class="bg-primary-container text-on-primary-container py-4 px-container-margin">
+<div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined animate-pulse">bolt</span>
+<span class="text-label-md font-label-md uppercase tracking-widest">Flash Sale Ending In:</span>
+</div>
+<div class="flex gap-4 text-headline-md font-headline-md font-bold" id="countdown">
+                    <span class="">02<small class="text-[10px] uppercase font-normal ml-1">h</small></span>
+                    <span class="">38<small class="text-[10px] uppercase font-normal ml-1">m</small></span>
+                    <span class="">11<small class="text-[10px] uppercase font-normal ml-1">s</small></span>
+                </div>
+</div>
+</section>
+<!-- Best Sellers Grid -->
+<section class="py-stack-lg px-container-margin">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-headline-lg font-headline-lg text-primary" style="font-family: &quot;Playfair Display&quot;, serif;">Best Sellers</h2>
+<p class="text-on-surface-variant text-body-md mt-1">The most coveted pieces this season.</p>
+</div>
+<a class="text-primary font-bold text-label-md border-b border-primary pb-1" href="#">Shop All</a>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container">
+<div class="absolute top-3 left-3 z-10 bg-[#D9534F] text-white px-2 py-1 rounded-[4px] text-[10px] font-bold">SALE 20%</div>
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="Close-up studio shot of a luxurious dark green silk slip dress with delicate straps. The lighting is soft and directional, highlighting the texture and sheen of the fabric. High-end fashion catalog aesthetic with a clean white background. Minimalist and refined mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxQihOw8k1Y8tdNgdlLFk1JNSNat5hvItMu85_Mgc6citOmCh2ubdOYV2MP143O06cWg2NiRufHKiF4GcnOAMfS7liDMl_e8CKOLMfQDtvxgBbyoW9SDTioy0RLfA9HzEIX8XWw-6zHJwHpMZgNCltrEKZef-hK1rse9hvPrjbn5kiTlheckN_Pgi0yc7a7zCNDToGt_mVLhQrk1yKTBd0t3FjqkHOSqz536RLve00r7FE25Q5VUu2">
+</div>
+<div class="text-center">
+<p class="text-on-surface-variant text-label-sm font-label-sm uppercase mb-1">Wa'ei Collection</p>
+<h3 class="text-primary text-body-md font-bold mb-2">Emerald Silk Slip</h3>
+<div class="flex items-center justify-center gap-2">
+<span class="text-[#D9534F] font-bold text-body-md">$240.00</span>
+<span class="text-outline text-label-sm line-through">$300.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container">
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="Full body studio shot of a model wearing tailored beige trousers and a minimalist charcoal grey blazer. Professional lighting with soft ambient fill, creating a clean high-end retail look. The style is modern minimalist with a sophisticated neutral color palette of beige, grey, and petrol green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcjIlf0oGm-ofsECPXDlrJf7P25BT3cs-aEBELgdWHT7KZfKkoSyeR_res2Q4iSQmu7lGw5HMwkKvnJK1viyUTTdOKsIC7P2UU5r-5jhDZZF2SaA8NZwa71c0wBfYGAa3rDxS5cxd01Go9eNnlzFWh3_9sexl0UpL4PWW1MPM6PPZyP8NFeWwL1sLMD-SKUWnf245cGHzXrj2NR3-eSwcFc3WrSsLUbPU35r0zQhA6_1fiMG8QjQoc">
+</div>
+<div class="text-center">
+<p class="text-on-surface-variant text-label-sm font-label-sm uppercase mb-1">Modern Tailoring</p>
+<h3 class="text-primary text-body-md font-bold mb-2">Linen Blend Blazer</h3>
+<div class="flex items-center justify-center gap-2">
+<span class="text-primary font-bold text-body-md">$450.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 (Mobile Hidden or Next Row) -->
+<div class="hidden lg:flex group relative flex-col">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container">
+<div class="absolute top-3 left-3 z-10 bg-[#D9534F] text-white px-2 py-1 rounded-[4px] text-[10px] font-bold">NEW</div>
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A pair of high-end, minimalist leather loafers in a deep petrol green color. They are placed on a clean marble surface with soft, diffused top lighting that emphasizes the premium leather grain. The background is a soft beige, maintaining a modern and luxurious aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2gzLFBkiEJKt_YxP9HgDU59aVK_DBkffR5GuWNMYJ3odWk8Bt64Q032J_ZKrfqQQqvtCg7hxcrNy9gEKGSeWosB1fMWYdv-2Mc_atqbDMNLmsHc5cP1JHH9mXGPO-5zvAVgqK1QlM-qYcHp2hDI80SPKIs6oAvIVu1eDuNRBEPZJT5X0gMOwdQfMM2hrNvyAbSZx83R9Oetj7jD5IH_h_wgQlZCQwIaYnFxOTP1CmEqf9m1stKbJo">
+</div>
+<div class="text-center">
+<p class="text-on-surface-variant text-label-sm font-label-sm uppercase mb-1">Footwear</p>
+<h3 class="text-primary text-body-md font-bold mb-2">Classic Petrol Loafer</h3>
+<div class="flex items-center justify-center gap-2">
+<span class="text-primary font-bold text-body-md">$320.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 (Mobile Hidden or Next Row) -->
+<div class="hidden lg:flex group relative flex-col">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container">
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a designer leather handbag in a muted sage green, featuring high-quality metallic hardware in gold. The lighting is bright and editorial, reflecting a luxury store environment. The composition is clean and focused on detail, emphasizing premium craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwN9pzOp4sK4KUl3zsx9gym0Hy57Sg2RvNG2u6_sXOWDixLhp0j6o5xYtBdo-Ku-W9snJPxRxQvXzxYnTFD-44aX04pvLfC3UP9s5FI362xTLhmnh4eKEXK8_kWpmGXIMDZJ--JB1DuUltlHcEhj8Y1UzhmybnnXPst8y-nPgTgPieY7jomiSXimBNckrYQTaum6NzKOhZaRFRE206WR1c4UQGCx4bSOCaoEZqBODi9d2qhLGbbNxu">
+</div>
+<div class="text-center">
+<p class="text-on-surface-variant text-label-sm font-label-sm uppercase mb-1">Leather Goods</p>
+<h3 class="text-primary text-body-md font-bold mb-2">Curated Day Tote</h3>
+<div class="flex items-center justify-center gap-2">
+<span class="text-primary font-bold text-body-md">$680.00</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Daily Look Curated Section (Asymmetric Bento) -->
+<section class="py-stack-lg px-container-margin bg-surface-container-low rounded-3xl mx-container-margin mb-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center max-w-6xl mx-auto py-12">
+<div class="md:col-span-5 order-2 md:order-1">
+<span class="text-primary font-bold text-label-md tracking-widest uppercase mb-4 block">Curated Concept</span>
+<h2 class="text-display-lg font-display-lg text-primary mb-6" style="font-family: &quot;Playfair Display&quot;, serif;">Daily Look: The Urban Minimalist</h2>
+<p class="text-body-lg text-on-surface-variant mb-8 leading-relaxed">Transition seamlessly from morning meetings to evening gallery openings with our curated selection of versatile, high-quality staples.</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Small product shot of a white structured t-shirt in organic cotton." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWvKSlxxRZ2AfJ_ttXHJMPoqB6PNkulzVHlKHc8fMM9orRQrRjehX0jQarFZBm1B6PtRn_FUl0vgOSlAroAy2Q9yvJlEeWhpDA-Ti1DfoFyUv5Q1QhYLcCromLuNKE350Zl8YQCGE3FOcQAFR0alTxwM9pDlm7hfW2M3ED0riqkBheoO4SWz7Y1xXrQkAxTOjDpmweKs6b89n6B7cgosfPqY0CdhrWFHy3KoZV0huIUf7_HtHR6Sza">
+</div>
+<div>
+<h4 class="font-bold text-primary">Heavyweight Organic Tee</h4>
+<p class="text-label-sm text-on-surface-variant">$85.00</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Small product shot of tailored black trousers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9GiQHcOeuUJdxqsUfb3cYc4gXTNBid6XfbQeQsQoFiZUqHnZNMrA5b7Z8TmS91UrKy0m-u8GsqadaqdAInEPrGuYLVb9C_ile8Zqs3D8aa9ppVap15p7QjGurM58CmD8nqD1kqKUB3YgQELkieXJMYz9gcEhqwGOG2XFu1-HrGbsNPnjaIT3tBubgKQ3J7g4ivkpGBtTOfUYdkftgY4vXH4knwgQczxuIN4hPKcaDl2pJuwGNkaHR">
+</div>
+<div>
+<h4 class="font-bold text-primary">Sculpted Trousers</h4>
+<p class="text-label-sm text-on-surface-variant">$195.00</p>
+</div>
+</div>
+</div>
+<button class="mt-10 text-primary font-bold border-b-2 border-primary py-1 group inline-flex items-center gap-2">
+                        Shop The Look
+                        <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 flex flex-col md:flex-row gap-4 h-full">
+<div class="flex-1 rounded-2xl overflow-hidden aspect-[4/5] shadow-xl">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Street style photography of a model walking in a metropolitan environment, wearing a minimalist monochrome outfit. Bright daylight, cinematic composition, focused on movement and high-end fabric texture. Modern minimalist retail aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtyvnwN2S-OYWDA6QX1AJTIaYH2W3HOizdsi2ZCBX0liIBFrJNur-lMbKoNn6SdsqLKb6lyMSicEvnpjA9UcqCD8BPRjyb75fIXqmPEe8Jo9znuyaYzpEM_IGFpfQmlV5Zh6jPi0Irj1iAT-dLpzp_u0Gt0ki34i_Vh6EXKfxiy-kQ3EQtX1RYfl4CGf2vvifZDA3_PMwxFGAoXAhKrEkLOQTgoNdUvQ1qWbZTud-ETbegdQ0Yo8zC">
+</div>
+<div class="hidden md:flex flex-col flex-1 gap-4">
+<div class="flex-1 rounded-2xl overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover" data-alt="Detail shot of a wrist wearing a high-end watch and a minimalist silver cuff bracelet. Focus on luxury materials and clean design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI07T87zj908ixC30eYM4sP_ndtMLa-lcqpcKYyywrVHc738C-RkLxudJhi5I1F6zMBUc_qdHP7biEGsJagbxDvrEv5wwJEduwdFRZF-fWiOg3LDax7VqtiAcI3WXLLBRPCKB3o8WX7a_ZttZjmYpN4JOZz9zZCYiTyLRzqujaK40mtagTpd9Tix_VMAtsgznwJZ4eR2U7hqjmYfkazdh_rWSu64xVypdZhlaKtGVica2qmCVTx5V7">
+</div>
+<div class="flex-1 rounded-2xl overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover" data-alt="A pair of clean white sneakers in a minimalist architectural space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv8Zku2uX4tZZQVCcJSjyW2gSIJyDtUs2TIGX72l3ZtN8pJFm9HeDUvl9ZfGTOefuROgBOBoILnM0To74Ipjf5GuQtcekTCiBbne8nPanjGwKw4O-KCgx0jJGwa7aKevheO-r3GDGWjZUZDB0B-ocxu76mM99VCCMvWzAxiKdNms7yiqEnEZRaXemeMoe4I6UGz62_F2JewTheL_2HdoGOb2z6SIs1G9AvlRLu4E6IVmMH0RzBTH4o">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Community Section -->
+<section class="py-section-padding px-container-margin text-center">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-4" style="font-family: 'Playfair Display', serif;">Join the Wa'ei Community</h2>
+<p class="text-body-md text-on-surface-variant mb-8 max-w-lg mx-auto">Receive early access to collections and exclusive editorial content directly in your inbox.</p>
+<form class="max-w-md mx-auto flex gap-2">
+<input class="flex-1 bg-white border border-outline-variant/30 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="Your email address" type="email">
+<button class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-container transition-colors" type="submit">Join</button>
+</form>
+</section>
+</main>
+<!-- Footer (Desktop) -->
+<footer class="hidden md:block bg-surface-container-highest py-16 px-container-margin">
+<div class="max-w-7xl mx-auto grid grid-cols-4 gap-8">
+<div>
+<div class="text-headline-md font-bold text-primary mb-6" style="font-family: &quot;Playfair Display&quot;, serif;">Wa'ei Retail</div>
+<p class="text-on-surface-variant text-body-md">Defining modern luxury through conscious curation and minimalist design since 2018.</p>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-6 uppercase text-label-sm tracking-widest">Shop</h4>
+<ul class="space-y-4 text-body-md text-on-surface-variant">
+<li class=""><a class="hover:text-primary" href="#">New Arrivals</a></li>
+<li class=""><a class="hover:text-primary" href="#">Best Sellers</a></li>
+<li class=""><a class="hover:text-primary" href="#">Men's Collection</a></li>
+<li class=""><a class="hover:text-primary" href="#">Women's Collection</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-6 uppercase text-label-sm tracking-widest">Support</h4>
+<ul class="space-y-4 text-body-md text-on-surface-variant">
+<li class=""><a class="hover:text-primary" href="#">Shipping &amp; Returns</a></li>
+<li class=""><a class="hover:text-primary" href="#">Contact Us</a></li>
+<li class=""><a class="hover:text-primary" href="#">Size Guide</a></li>
+<li class=""><a class="hover:text-primary" href="#">FAQs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-6 uppercase text-label-sm tracking-widest">Social</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-outline-variant/20 mt-16 pt-8 text-center text-label-sm text-outline">
+            © 2024 Wa'ei Retail. All Rights Reserved. Designed for Excellence.
+        </div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-3 bg-surface border-t border-outline-variant/20 z-50"><a class="flex flex-col items-center justify-center text-primary font-bold" href="home.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span><span class="text-label-sm font-label-sm">Home</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="Categories.html"><span class="material-symbols-outlined">grid_view</span><span class="text-label-sm font-label-sm">Categories</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="New Arrivals.html"><span class="material-symbols-outlined">auto_awesome</span><span class="text-label-sm font-label-sm">New Arrivals</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="Profile.html"><span class="material-symbols-outlined">person</span><span class="text-label-sm font-label-sm">Profile</span></a></nav>
+<script>
+        // Simple Countdown Timer Implementation
+        function startCountdown() {
+            let hours = 2;
+            let minutes = 45;
+            let seconds = 12;
+
+            const display = document.getElementById('countdown');
+            
+            const timer = setInterval(() => {
+                seconds--;
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                }
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                }
+                if (hours < 0) {
+                    clearInterval(timer);
+                    return;
+                }
+
+                display.innerHTML = `
+                    <span>${hours.toString().padStart(2, '0')}<small class="text-[10px] uppercase font-normal ml-1">h</small></span>
+                    <span>${minutes.toString().padStart(2, '0')}<small class="text-[10px] uppercase font-normal ml-1">m</small></span>
+                    <span>${seconds.toString().padStart(2, '0')}<small class="text-[10px] uppercase font-normal ml-1">s</small></span>
+                `;
+            }, 1000);
+        }
+
+        window.onload = startCountdown;
+    </script>
+<div class="fixed inset-0 z-[100] hidden" id="nav-drawer">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0" id="nav-drawer-backdrop" onclick="const drawer = document.getElementById('nav-drawer'); const backdrop = document.getElementById('nav-drawer-backdrop'); const panel = document.getElementById('nav-drawer-panel'); backdrop.classList.replace('opacity-100', 'opacity-0'); panel.classList.replace('translate-x-0', '-translate-x-full'); setTimeout(() =&gt; { drawer.classList.add('hidden'); }, 300);"></div>
+<aside class="absolute left-0 top-0 h-full w-80 bg-surface shadow-xl transition-transform duration-300 -translate-x-full flex flex-col" id="nav-drawer-panel">
+<div class="flex items-center justify-between p-container-margin border-b border-outline-variant/10">
+<h2 class="font-display-lg text-headline-md text-primary italic" style="font-family: 'Playfair Display', serif;">Ruqi</h2>
+<button class="text-primary hover:opacity-80 transition-opacity" id="nav-drawer-close" onclick="const drawer = document.getElementById('nav-drawer'); const backdrop = document.getElementById('nav-drawer-backdrop'); const panel = document.getElementById('nav-drawer-panel'); backdrop.classList.replace('opacity-100', 'opacity-0'); panel.classList.replace('translate-x-0', '-translate-x-full'); setTimeout(() =&gt; { drawer.classList.add('hidden'); }, 300);">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex-1 py-8 px-container-margin">
+<ul class="space-y-6"><li class=""><a class="text-headline-md text-primary hover:text-secondary transition-colors flex items-center gap-4" href="home.html" style="font-family: &quot;Playfair Display&quot;, serif;"><span class="material-symbols-outlined">home</span>Home</a></li><li class=""><a class="text-headline-md text-primary hover:text-secondary transition-colors flex items-center gap-4" href="Categories.html" style="font-family: &quot;Playfair Display&quot;, serif;"><span class="material-symbols-outlined">grid_view</span>Categories</a></li><li class=""><a class="text-headline-md text-primary hover:text-secondary transition-colors flex items-center gap-4" href="New Arrivals.html" style="font-family: &quot;Playfair Display&quot;, serif;"><span class="material-symbols-outlined">auto_awesome</span>New Arrivals</a></li><li class=""><a class="text-headline-md text-primary hover:text-secondary transition-colors flex items-center gap-4" href="Profile.html" style="font-family: &quot;Playfair Display&quot;, serif;"><span class="material-symbols-outlined">person</span>Profile</a></li></ul>
+</nav>
+<div class="p-container-margin border-t border-outline-variant/10">
+<p class="text-label-sm text-outline uppercase tracking-widest mb-4">Account</p>
+<div class="flex items-center gap-4 text-primary"><a href="Profile.html" class="flex items-center gap-4 text-primary hover:text-secondary transition-colors"><span class="material-symbols-outlined">person</span><span class="font-label-md">Sign In / Register</span></a></div>
+</div>
+</aside>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
